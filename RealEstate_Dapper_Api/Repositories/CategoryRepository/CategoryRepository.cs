@@ -1,6 +1,7 @@
 ﻿using RealEstate_Dapper_Api.Dtos.CategoryDtos;
 using RealEstate_Dapper_Api.Models.DapperContext;
 using Dapper;
+using Microsoft.Identity.Client;
 
 namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
 {
@@ -46,6 +47,19 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
                 return value.ToList();
             }
         }
+        //Kategorinin id gore getir tum verileri
+        public async Task<GetByIDCategoryDto> GetCategory(int id)
+        {
+            string query = "Select * From Category Where CategoryID=@categoryID";
+            var parameters = new DynamicParameters();
+            parameters.Add("@CategoryID", id);
+            using (var connection = _context.CreateConnection()) 
+            {
+                var values = await connection.QueryFirstAsync<GetByIDCategoryDto>(query, parameters);//tek deger dondurecek
+                return values;
+            }
+        }
+
         //Kategori guncelle
         public async void UpdateCategory(UpdateCategoryDto categorydto)
         {
