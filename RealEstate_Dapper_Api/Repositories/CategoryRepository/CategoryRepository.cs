@@ -12,8 +12,8 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
         {
             _context = context;
         }
-        //Kategorileri Ekle
-        public async void CreateRepository(CreateCategoryDto categoryDto)
+        //Kategori Ekle
+        public async void CreateCategory(CreateCategoryDto categoryDto)
         {
             string query = "insert into Category (CategoryName,CategoryStatus) values (@categoryName,@categoryStatus)";
             var parameters = new DynamicParameters();
@@ -24,8 +24,19 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
                 await connection.ExecuteAsync(query,parameters);
             }
         }
+        //Kategori Sil
+        public async void DeleteCategory(int id)
+        {
+            string query = "Delete From Category Where CategoryID=@categoryID";
+            var parameters = new DynamicParameters();
+            parameters.Add("categoryID", id);
+            using (var connection=_context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query,parameters);
+            }
+        }
 
-        //Kategorileri listele
+        //Kategori listele
         public async Task<List<ResultCategoryDto>> GetAllCategoryAsync()
         {
             string query = "Select * From Category";
@@ -33,6 +44,20 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
             {
                 var value=await  connection.QueryAsync<ResultCategoryDto>(query);
                 return value.ToList();
+            }
+        }
+        //Kategori guncelle
+        public async void UpdateCategory(UpdateCategoryDto categorydto)
+        {
+           string query="Update Category Set CategoryName=@categoryName,CategoryStatus=@categoryStatus where " +
+                "CategoryID=@categoryID";
+            var parameters = new DynamicParameters();
+            parameters.Add("@categoryName",categorydto.CategoryName);
+            parameters.Add("categoryStatus",categorydto.CategoryStatus);
+            parameters.Add("categoryID", categorydto.CategoryID);
+            using (var connection=_context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query,parameters);
             }
         }
     }

@@ -9,7 +9,7 @@ namespace RealEstate_Dapper_Api.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        
+
         private readonly ICategoryRepository _categoryRepository;
 
         public CategoriesController(ICategoryRepository categoryRepository)
@@ -25,8 +25,20 @@ namespace RealEstate_Dapper_Api.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
         {
-            _categoryRepository.CreateRepository(createCategoryDto);
+            _categoryRepository.CreateCategory(createCategoryDto);
             return Ok("Kategori Eklendi");
+        }
+        [HttpDelete]
+        public async Task<IActionResult> DeleteCategory(int id)//disaridan id degeri alacak
+        {
+            _categoryRepository.DeleteCategory(id);
+            return Ok("Kategori Silindi");
+        }
+        [HttpPut]
+        public async Task<IActionResult> UpdateCategory(UpdateCategoryDto updateCategoryDto)
+        {
+            _categoryRepository.UpdateCategory(updateCategoryDto);
+            return Ok("Kategori güncellendi");
         }
     }
 }
