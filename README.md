@@ -17,11 +17,6 @@ Bu proje, bir emlak firmasının ilan, şehir ve emlakçı verilerini yönetmek 
 
 ## Kullanılan Teknolojiler & Diller
 
-### Frontend
-- **CSS**
-- **Bootstrap**
-- **JavaScript**
-
 ### Backend
 - **ASP.NET Core 8.0**
 - **Dapper ORM**
@@ -29,4 +24,11 @@ Bu proje, bir emlak firmasının ilan, şehir ve emlakçı verilerini yönetmek 
 - **Swagger**
 - **SignalR**
 - **JWT (Json Web Token)**
+
+### Frontend
+- **CSS**
+- **Bootstrap**
+- **JavaScript**
+
+
 
