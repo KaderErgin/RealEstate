@@ -1,7 +1,7 @@
 # RealEstate
 # Emlak Yönetim Sistemi
 
-Bu proje, bir emlak firmasının ilan, şehir ve emlakçı verilerini yönetmek için geliştirilmiş bir ASP.NET Core uygulamasıdır. Uygulama, hızlı ve verimli veritabanı işlemleri için Dapper ORM kullanır ve RESTful API aracılığıyla veri yönetimi sağlar. Swagger ile API dokümantasyonu ve test imkanı sunulur.
+Bu proje,ilan, şehir ve emlakçı verilerini yönetmek için geliştirilmiş bir ASP.NET Core tabanlı emlak yönetim uygulamasıdır. Uygulama, hızlı ve verimli veritabanı işlemleri için Dapper ORM kullanır ve RESTful API aracılığıyla veri yönetimi sağlar. Swagger ile API dokümantasyonu ve test imkanı sunulur.
 
 ## Özellikler
 
