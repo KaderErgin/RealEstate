@@ -12,6 +12,7 @@ Bu proje, bir emlak firmasının ilan, şehir ve emlakçı verilerini yönetmek 
 - 🏗️ **Veritabanı Operasyonları**: İlişkili tablolar, birleştirmeler, trigger'lar ve prosedürler içerir.
 - 🔐 **Güvenli Giriş**: Kullanıcı güvenliğini sağlamak için JWT token kullanılarak giriş yapılır.
 - 📈 **Admin Paneli**: Emlaklarla ilgili istatistiklerin görüntülenebildiği bir yönetici paneli mevcuttur.
+- 🏠 **İlan Yönetim Sistemi:**: Kullanıcılar kendi ilanlarını verebilir ve yönetebilir.
 - 🔍 **Gelişmiş Arama Özelliği**: Kullanıcıların kategori ve şehir bazında arama yaparak istedikleri emlakları bulmalarını sağlar.
 
 ## Kullanılan Teknolojiler & Diller
