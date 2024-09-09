@@ -16,6 +16,8 @@ This project is an ASP.NET Core based property management application developed 
   
 <hr>
 
+## Technologies & Languages ​​Used
+
 ### Backend
 - **ASP.NET Core 8.0**
 - **Dapper ORM**
