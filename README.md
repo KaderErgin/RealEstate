@@ -13,7 +13,7 @@ This project is an ASP.NET Core based property management application developed 
 - 📈 **Admin Panel**: There is an admin panel where real estate-related statistics can be viewed.
 - 🏠 **Advertising Management System:**: Users can publish and manage their own ads.
 - 🔍 **Advanced Search Feature**: Allows users to find what they are looking for by searching by category and city.
-- 
+  
 <hr>
 
 ### Backend
