@@ -9,7 +9,7 @@ Bu proje, bir emlak firmasının ilan, şehir ve emlakçı verilerini yönetmek 
 - 🌐 **RESTful API**: Verileri yönetmek ve sorgulamak için RESTful API tasarlanmıştır.
 - 📋 **Swagger Entegrasyonu**: API dokümantasyonu oluşturmak ve test etmek için Swagger kullanılır.
 - 📂 **Temiz Folder Yapısı**: Temiz kod prensiplerine uygun olarak düzenlenmiştir.
-- 🏗️ **Veritabanı Operasyonları**: İlişkili tablolar, birleştirmeler, trigger'lar ve prosedürler içerir.
+- 🗃️ **Veritabanı Operasyonları**: İlişkili tablolar, birleştirmeler, trigger'lar ve prosedürler içerir.
 - 🔐 **Güvenli Giriş**: Kullanıcı güvenliğini sağlamak için JWT token kullanılarak giriş yapılır.
 - 📈 **Admin Paneli**: Emlaklarla ilgili istatistiklerin görüntülenebildiği bir yönetici paneli mevcuttur.
 - 🏠 **İlan Yönetim Sistemi:**: Kullanıcılar kendi ilanlarını verebilir ve yönetebilir.
