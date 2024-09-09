@@ -1,6 +1,6 @@
 # Real Estate Management System
 
-This project is an ASP.NET Core based property management application developed for listing, city and real estate basics. The application uses Dapper ORM for fast and efficient data transfer operations and provides data management via RESTful API. API documentation and tests are available on Swagger.
+This project is an ASP.NET Core-based real estate management application developed to manage property listings, cities, and real estate agents. The application uses Dapper ORM for fast and efficient database operations and provides data management through a RESTful API. Swagger is used for API documentation and testing.
 
 ## Features
 
