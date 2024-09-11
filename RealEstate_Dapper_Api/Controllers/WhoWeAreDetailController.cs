@@ -10,11 +10,11 @@ namespace RealEstate_Dapper_Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class WoWeAreDetailController : ControllerBase
+    public class WhoWeAreDetailController : ControllerBase
     {
         private readonly IWhoWeAreDetailRepository _whoWeAreDetailRepository;
 
-        public WoWeAreDetailController(IWhoWeAreDetailRepository whoWeAreDetailRepository)
+        public WhoWeAreDetailController(IWhoWeAreDetailRepository whoWeAreDetailRepository)
         {
             _whoWeAreDetailRepository = whoWeAreDetailRepository;
         }
