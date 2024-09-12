@@ -21,7 +21,7 @@ namespace RealEstate_Dapper_UI.ViewComponents.HomePage
             {
                 var jsonData = await  
                 responseMessage.Content.ReadAsStringAsync();//gelen icerigi string formatinda oku
-                var values = JsonConvert.DeserializeObject<List<ResultProductDtos>>(jsonData);//json formatında veriyi oku tablo(metin) formatına donustur
+                var values = JsonConvert.DeserializeObject<List<ResultProductDto>>(jsonData);//json formatında veriyi oku tablo(metin) formatına donustur
                 return View(values);         
             }
             return View();
