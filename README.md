@@ -5,7 +5,6 @@ This project is an ASP.NET Core-based real estate management application develop
 ## Features
 
 - 🚀 **Fast and Efficient Database Operations**: Powered by Dapper ORM on ASP.NET Core.
-- 🌐 **RESTful API**: RESTful API is designed to organize and query data.
 - 📋 **Swagger Integration**: Swagger is used to create and test API documentation.
 - 📂 **Clean Folder Structure**: Organized in accordance with clean code principles.
 - 🗃️ **Database Operations**: Contains related tables, sections, triggers and procedures.
