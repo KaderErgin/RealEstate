@@ -46,6 +46,6 @@ namespace RealEstate_Dapper_Api.Controllers
             var value =await _categoryRepository.GetCategory(id);
             return Ok (value);
         }
-
+       
     }
 }
