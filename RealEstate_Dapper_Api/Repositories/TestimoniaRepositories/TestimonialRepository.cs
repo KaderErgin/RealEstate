@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using RealEstate_Dapper_Api.Dtos.ServiceDtos;
 using RealEstate_Dapper_Api.Dtos.TestimonialDtos;
 using RealEstate_Dapper_Api.Models.DapperContext;
 

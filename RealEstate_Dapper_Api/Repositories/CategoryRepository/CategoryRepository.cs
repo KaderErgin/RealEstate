@@ -18,8 +18,8 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
         {
             string query = "insert into Category (CategoryName,CategoryStatus) values (@categoryName,@categoryStatus)";
             var parameters = new DynamicParameters();
-            parameters.Add("categoryName",categoryDto.CategoryName);
-            parameters.Add("categoryStatus", true);
+            parameters.Add("@categoryName",categoryDto.CategoryName);
+            parameters.Add("@categoryStatus", true);
             using (var connection = _context.CreateConnection()) 
             {
                 await connection.ExecuteAsync(query,parameters);
@@ -30,7 +30,7 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
         {
             string query = "Delete From Category Where CategoryID=@categoryID";
             var parameters = new DynamicParameters();
-            parameters.Add("categoryID", id);
+            parameters.Add("@categoryID", id);
             using (var connection=_context.CreateConnection())
             {
                 await connection.ExecuteAsync(query,parameters);
@@ -67,8 +67,8 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
                 "CategoryID=@categoryID";
             var parameters = new DynamicParameters();
             parameters.Add("@categoryName",categorydto.CategoryName);
-            parameters.Add("categoryStatus",categorydto.CategoryStatus);
-            parameters.Add("categoryID", categorydto.CategoryID);
+            parameters.Add("@categoryStatus",categorydto.CategoryStatus);
+            parameters.Add("@categoryID", categorydto.CategoryID);
             using (var connection=_context.CreateConnection())
             {
                 await connection.ExecuteAsync(query,parameters);

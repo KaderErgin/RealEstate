@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using RealEstate_Dapper_Api.Dtos.CategoryDtos;
 using RealEstate_Dapper_Api.Dtos.WhoWeAreDetailDtos;
 using RealEstate_Dapper_Api.Dtos.WhoWeAreDtos;
 using RealEstate_Dapper_Api.Models.DapperContext;
@@ -18,10 +17,10 @@ namespace RealEstate_Dapper_Api.Repositories.WhoWeAreRepository
         {
             string query = "insert into WhoWeAreDetail (Title,Subtitle,Description1,Description2) values (@title,@subTitle,@description1,@description2)";
             var parameters = new DynamicParameters();
-            parameters.Add("title", createWhoWeAreDetailDto.Title);
-            parameters.Add("subTitle", createWhoWeAreDetailDto.Subtitle);
-            parameters.Add("description1", createWhoWeAreDetailDto.Description1);
-            parameters.Add("description2", createWhoWeAreDetailDto.Description2);
+            parameters.Add("@title", createWhoWeAreDetailDto.Title);
+            parameters.Add("@subTitle", createWhoWeAreDetailDto.Subtitle);
+            parameters.Add("@description1", createWhoWeAreDetailDto.Description1);
+            parameters.Add("@description2", createWhoWeAreDetailDto.Description2);
             using (var connection = _context.CreateConnection())
             {
                 await connection.ExecuteAsync(query, parameters);
@@ -78,10 +77,10 @@ namespace RealEstate_Dapper_Api.Repositories.WhoWeAreRepository
                  "WhoWeAreDetailID=@whoWeAreDetailID";
             var parameters = new DynamicParameters();
             parameters.Add("@title", updateWhoWeAreDetailDto.Title);
-            parameters.Add("subTitle", updateWhoWeAreDetailDto.Subtitle);
-            parameters.Add("description1", updateWhoWeAreDetailDto.Description1);
-            parameters.Add("description2", updateWhoWeAreDetailDto.Description2);
-            parameters.Add("whoWeAreDetailID", updateWhoWeAreDetailDto.WhoWeAreDetailId);
+            parameters.Add("@subTitle", updateWhoWeAreDetailDto.Subtitle);
+            parameters.Add("@description1", updateWhoWeAreDetailDto.Description1);
+            parameters.Add("@description2", updateWhoWeAreDetailDto.Description2);
+            parameters.Add("@whoWeAreDetailID", updateWhoWeAreDetailDto.WhoWeAreDetailId);
             using (var connection = _context.CreateConnection())
             {
                 await connection.ExecuteAsync(query, parameters);
