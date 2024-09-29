@@ -26,23 +26,23 @@ namespace RealEstate_Dapper_Api.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateWhoWeAreDetail(CreateWhoWeAreDetailDto createWhoWeAreDetailDto)
         {
-            _whoWeAreDetailRepository.CreateWeWhoAreDetail(createWhoWeAreDetailDto);
-            return Ok("Hakkımızda Kısmı Eklendi");
+            _whoWeAreDetailRepository.CreateWhoWeAreDetail(createWhoWeAreDetailDto);
+            return Ok("Biz Kimiz Kısmı Eklendi");
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteWhoWeAreDetail(int id)//disaridan id degeri alacak
         {
-            _whoWeAreDetailRepository.DeleteWeWhoAreDetail(id);
-            return Ok("Hakkımızda Kısmı Silindi");
+            _whoWeAreDetailRepository.DeleteWhoWeAreDetail(id);
+            return Ok("Biz Kimiz Kısmı Silindi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateWeWhoAreDetail(UpdateWhoWeAreDetailDto updateWhoWeAreDetailDto)
+        public async Task<IActionResult> UpdateWhoWeAreDetail(UpdateWhoWeAreDetailDto updateWhoWeAreDetailDto)
         {
-            _whoWeAreDetailRepository.UpdateWeWhoAreDetail(updateWhoWeAreDetailDto);
-            return Ok("Hakkımzda Kısmı güncellendi");
+            _whoWeAreDetailRepository.UpdateWhoWeAreDetail(updateWhoWeAreDetailDto);
+            return Ok("Biz Kimiz Kısmı güncellendi");
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetWeWhoAreDetail(int id)
+        public async Task<IActionResult> GetWhoWeAreDetail(int id)
         {
             var value = await _whoWeAreDetailRepository.GetWhoWeAreDetail(id);
             return Ok(value);
