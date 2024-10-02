@@ -62,11 +62,11 @@ namespace RealEstate_Dapper_Api.Repositories.PopularLocationRepositories
         public async void UpdatePopularLocation(UpdatePopularLocationDto updatePopularLocationDto)
         {
             string query = "Update PopularLocation" +
-                " Set CityName=@cityName,ImageUrl=@imageUrl where LocationeID=@locationeID";
+                " Set CityName=@cityName,ImageUrl=@imageUrl where LocationID=@locationID";
             var parameters = new DynamicParameters();
             parameters.Add("@cityName", updatePopularLocationDto.CityName);
             parameters.Add("@imageUrl", updatePopularLocationDto.ImageUrl);
-            parameters.Add("@locationeID", updatePopularLocationDto.LocationID);
+            parameters.Add("@locationID", updatePopularLocationDto.LocationID);
             using (var connectiont = _context.CreateConnection())
             {
                 await connectiont.ExecuteAsync(query, parameters);
