@@ -17,7 +17,7 @@ This project is an ASP.NET Core-based real estate management application develop
 <hr>
 
 ## Technologies & Languages ​​Used
-
+## Backend Technologies
 ### Backend
 - **ASP.NET Core 8.0**
 - **Dapper ORM**
@@ -30,6 +30,3 @@ This project is an ASP.NET Core-based real estate management application develop
 - **CSS**
 - **Bootstrap**
 - **JavaScript**
-
-
-
