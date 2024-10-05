@@ -20,18 +20,22 @@
                                 $("#connstatus").text(connection.state);//Baslangicta Baglanti Durumu
 
                                 connection.start().then(() => {
-                                    $("#connstatus").text(connection.state);//Baglanti Baslatildiktan Sonra ki  Durumu
+                                    $("#connstatus").text(connection.state);//Baglanti Baslatildiktan Sonraki  Durumu
+                                    setInterval(() => {
+                                        connection.invoke("SendCategoryCount");//Baglanti Icin Istekte Bulunacak
+                                    }, 1000);//de Hub yer alan connection istekte bulunur
                                    
-
                                 }).catch((err) => { console.log(err) });
 
+                               
+                                connection.on("ReceiveCategoryCount", (value) => {
+                                    $("#categorycount").text(value);
+                                });
 
-                             
+
 
                             });
-
-
-
+                           
                         </script>
                     </div>
                 </div>
@@ -43,6 +47,9 @@
 <div class="row">
     <div class="col-md-8 offset-2">
         <div class="alert alert-warning">Bağlantı Durumu:<strong id="connstatus"></strong></div>
+    </div>
+    <div class="col-md-8 offset-2">
+        <div class="alert alert-primary">Kategori Sayısı:<strong id="categorycount"></strong></div>
     </div>
 
 </div>
