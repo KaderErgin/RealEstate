@@ -8,14 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.3" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.35.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\EstateAgent\Data\" />
     <Folder Include="Areas\EstateAgent\Models\" />
-    <Folder Include="Views\Shared\Components\NewFolder\" />
     <Folder Include="wwwroot\cityimages\" />
   </ItemGroup>
 
