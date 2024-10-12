@@ -22,9 +22,9 @@ namespace RealEstate_Dapper_Api.Repositories.EstateAgentRepositories.DashboardRe
 
         public int ProductCountByEmployeeId(int id)
         {
-            string query = "Select Count(*) From Product where EmployeeId=@employeeId";
+            string query = "Select Count(*) From Product where EmployeeID=@employeeID";
             var parameters = new DynamicParameters();
-            parameters.Add("@employeeId", id);
+            parameters.Add("@employeeID", id);
             using (var connection = _context.CreateConnection())
             {
                 var values = connection.QueryFirstOrDefault<int>(query, parameters);
@@ -34,9 +34,9 @@ namespace RealEstate_Dapper_Api.Repositories.EstateAgentRepositories.DashboardRe
 
         public int ProductCountByStatusFalse(int id)
         {
-            string query = "Select Count(*) From Product where EmployeeId=@employeeId And ProductStatus=0";
+            string query = "Select Count(*) From Product where EmployeeID=@employeeID And ProductStatus=0";
             var parameters = new DynamicParameters();
-            parameters.Add("@employeeId", id);
+            parameters.Add("@employeeID", id);
             using (var connection = _context.CreateConnection())
             {
                 var values = connection.QueryFirstOrDefault<int>(query, parameters);
@@ -46,9 +46,9 @@ namespace RealEstate_Dapper_Api.Repositories.EstateAgentRepositories.DashboardRe
 
         public int ProductCountByStatusTrue(int id)
         {
-            string query = "Select Count(*) From Product where EmployeeId=@employeeId And ProductStatus=1";
+            string query = "Select Count(*) From Product where EmployeeID=@employeeID And ProductStatus=1";
             var parameters = new DynamicParameters();
-            parameters.Add("@employeeId", id);
+            parameters.Add("@employeeID", id);
             using (var connection = _context.CreateConnection())
             {
                 var values = connection.QueryFirstOrDefault<int>(query, parameters);

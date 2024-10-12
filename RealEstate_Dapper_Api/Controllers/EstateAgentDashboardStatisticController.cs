@@ -26,10 +26,17 @@ namespace RealEstate_Dapper_Api.Controllers
         {
             return Ok(_statisticRepository.ProductCountByStatusTrue(id));
         }
+
         [HttpGet("ProductCountByStatusFalse")]
         public IActionResult ProductCountByStatusFalse(int id)
         {
             return Ok(_statisticRepository.ProductCountByStatusFalse(id));
+        }
+
+        [HttpGet("AllProductCount")]
+        public IActionResult AllProductCount()
+        {
+            return Ok(_statisticRepository.AllProductCount());
         }
     }
 }
