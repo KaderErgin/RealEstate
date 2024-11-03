@@ -20,25 +20,25 @@ namespace RealEstate_Dapper_Api.Controllers
         [HttpGet]
         public async Task<ActionResult> WhoWeAreDetailList()
         {
-            var values = await _whoWeAreDetailRepository.GetAllWhoWeAreAsync();
+            var values = await _whoWeAreDetailRepository.GetAllWhoWeAreDetail();
             return Ok(values);
         }
         [HttpPost]
         public async Task<IActionResult> CreateWhoWeAreDetail(CreateWhoWeAreDetailDto createWhoWeAreDetailDto)
         {
-            _whoWeAreDetailRepository.CreateWhoWeAreDetail(createWhoWeAreDetailDto);
+          await _whoWeAreDetailRepository.CreateWhoWeAreDetail(createWhoWeAreDetailDto);
             return Ok("Biz Kimiz Kısmı Eklendi");
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteWhoWeAreDetail(int id)//disaridan id degeri alacak
         {
-            _whoWeAreDetailRepository.DeleteWhoWeAreDetail(id);
+          await _whoWeAreDetailRepository.DeleteWhoWeAreDetail(id);
             return Ok("Biz Kimiz Kısmı Silindi");
         }
         [HttpPut]
         public async Task<IActionResult> UpdateWhoWeAreDetail(UpdateWhoWeAreDetailDto updateWhoWeAreDetailDto)
         {
-            _whoWeAreDetailRepository.UpdateWhoWeAreDetail(updateWhoWeAreDetailDto);
+          await _whoWeAreDetailRepository.UpdateWhoWeAreDetail(updateWhoWeAreDetailDto);
             return Ok("Biz Kimiz Kısmı güncellendi");
         }
         [HttpGet("{id}")]

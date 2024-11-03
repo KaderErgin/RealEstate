@@ -18,7 +18,7 @@ namespace RealEstate_Dapper_Api.Controllers
         [HttpGet]
         public async Task<IActionResult> PopularLocationList()
         {
-            var value = await _locationRepository.GetAllPopularLocationdeAsync();
+            var value = await _locationRepository.GetAllPopularLocationde();
             return Ok(value);
         }
         [HttpPost]
@@ -30,13 +30,13 @@ namespace RealEstate_Dapper_Api.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePopularLocation(int id)
         {
-            _locationRepository.DeletePopularLocation(id);
+           await _locationRepository.DeletePopularLocation(id);
             return Ok("Lokasyon Kısmı Silindi");
         }
         [HttpPut]
         public async Task<IActionResult> UpdatePopularLocationDetail(UpdatePopularLocationDto updatePopularLocationDto)
         {
-            _locationRepository.UpdatePopularLocation(updatePopularLocationDto);
+           await _locationRepository.UpdatePopularLocation(updatePopularLocationDto);
             return Ok("Lokasyon Kısmı güncellendi");
         }
         [HttpGet("{id}")]

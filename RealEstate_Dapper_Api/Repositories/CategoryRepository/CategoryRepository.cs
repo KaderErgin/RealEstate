@@ -14,7 +14,7 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
             _context = context;
         }
         //Kategori Ekle
-        public async void CreateCategory(CreateCategoryDto categoryDto)
+        public async Task CreateCategory(CreateCategoryDto categoryDto)
         {
             string query = "insert into Category (CategoryName,CategoryStatus) values (@categoryName,@categoryStatus)";
             var parameters = new DynamicParameters();
@@ -26,7 +26,7 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
             }
         }
         //Kategori Sil
-        public async void DeleteCategory(int id)
+        public async Task DeleteCategory(int id)
         {
             string query = "Delete From Category Where CategoryID=@categoryID";
             var parameters = new DynamicParameters();
@@ -38,7 +38,7 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
         }
 
         //Kategori listele
-        public async Task<List<ResultCategoryDto>> GetAllCategoryAsync()
+        public async Task<List<ResultCategoryDto>> GetAllCategory()
         {
             string query = "Select * From Category";
             using (var connection=_context.CreateConnection())
@@ -61,7 +61,7 @@ namespace RealEstate_Dapper_Api.Repositories.CategoryRepository
         }
 
         //Kategori guncelle
-        public async void UpdateCategory(UpdateCategoryDto categorydto)
+        public async Task UpdateCategory(UpdateCategoryDto categorydto)
         {
            string query="Update Category Set CategoryName=@categoryName,CategoryStatus=@categoryStatus where " +
                 "CategoryID=@categoryID";
