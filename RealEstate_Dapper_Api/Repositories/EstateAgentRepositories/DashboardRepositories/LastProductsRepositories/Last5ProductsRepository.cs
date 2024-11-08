@@ -17,9 +17,9 @@ namespace RealEstate_Dapper_Api.Repositories.EstateAgentRepositories.DashboardRe
         {
             string query = "Select Top(5) ProductID,Title,Price,City,District,ProductCategory,CategoryName,AdvertisementDate" +
                 " From Product Inner Join Category On Product.ProductCategory=Category.CategoryID " +
-                "Where EmployeeID=@employeeID Order By ProductID Desc";
+                "Where AppUserId=@appUserId Order By ProductID Desc";
             var parameters = new DynamicParameters();
-            parameters.Add("@employeeID", id);
+            parameters.Add("@appUserId", id);
             using (var connection = _context.CreateConnection())
             {
                 var values = await connection.QueryAsync<ResultLast5ProductWithCategoryDto>(query, parameters);
