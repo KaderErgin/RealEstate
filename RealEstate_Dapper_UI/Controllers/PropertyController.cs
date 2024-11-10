@@ -48,8 +48,8 @@ namespace RealEstate_Dapper_UI.Controllers
 			return View();
 		}
 
-		[HttpGet]
-		public async Task<IActionResult> PropertySingle(int id)
+		[HttpGet("property/{slug}/{id}")]
+		public async Task<IActionResult> PropertySingle(string slug, int id)
 		{
 			ViewBag.i = id;
 			var client = _httpClientFactory.CreateClient();
@@ -70,8 +70,10 @@ namespace RealEstate_Dapper_UI.Controllers
 			ViewBag.address = values.address;
 			ViewBag.type = values.type;
 			ViewBag.description = values.description;
+            ViewBag.slugUrl = values.SlugUrl;
 
-			ViewBag.bathCount = values2.bathCount;
+
+            ViewBag.bathCount = values2.bathCount;
 			ViewBag.bedCount = values2.bedRoomCount;
 			ViewBag.size = values2.productSize;
 			ViewBag.roomCount = values2.roomCount;
@@ -88,12 +90,26 @@ namespace RealEstate_Dapper_UI.Controllers
 			int month = timeSpan.Days;
 
 			ViewBag.datediff = month / 30;
+            string slugFromTitle = CreateSlug(values.title);
+            ViewBag.slugUrl = slugFromTitle;
 
 
-			return View();
+            return View();
 
 		}
-	}
+
+        private string CreateSlug(string title)
+		{
+            title = title.ToLowerInvariant(); //Slugurl icin uygulanacak,kucuk harfe çevir
+            title = title.Replace(" ", "-"); // Bosluklari tire ile degistir
+            title = System.Text.RegularExpressions.Regex.Replace(title, @"[^a-z0-9\s-]", ""); // Gecersiz karakterleri kaldir
+            title = System.Text.RegularExpressions.Regex.Replace(title, @"\s+", " ").Trim(); // Birden fazla boslugu tek bosluga cevir ve kenar bosluklarini kaldir
+            title = System.Text.RegularExpressions.Regex.Replace(title, @"\s", "-"); // Bosluklari "-" ile degistir
+
+            return title;
+        }
+
+    }
 }
 
 
