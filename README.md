@@ -26,7 +26,7 @@ This project is an ASP.NET Core-based real estate management application develop
 - **SignalR**
 - **JWT (Json Web Token)**
 
-### Frontend
+## Frontend
 - **CSS**
 - **Bootstrap**
 - **JavaScript**
