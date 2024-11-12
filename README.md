@@ -32,5 +32,5 @@ This project is an ASP.NET Core-based real estate management application develop
 - **JavaScript**
   <hr>
   
-  ## Site Images
+## Site Images
   
