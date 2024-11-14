@@ -44,6 +44,6 @@ This project is an ASP.NET Core-based real estate management application develop
 ## Admin Panel Images
   ![Login](./assets/Login.png)
   ![AdminPanel1](./assets/Admin_1.png)
-  ![AdminPanel2](./assets/Admin_2.png)
-  ![AdminPanel3](./assets/Admin_4.png)
-  ![AdminPanel4](./assets/Admin_3.png)
+  ![AdminPanel2](./assets/Admin_3.png)
+  ![AdminPanel3](./assets/Admin_2.png)
+  ![AdminPanel4](./assets/Admin_4.png)
