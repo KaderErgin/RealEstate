@@ -33,4 +33,4 @@ This project is an ASP.NET Core-based real estate management application develop
   <hr>
   
 ## Site Images
-  
+  ![Homepage](./assets/HomePage_1.png)
