@@ -32,17 +32,33 @@ This project is an ASP.NET Core-based real estate management application develop
 - **JavaScript**
   <hr>
   
+  ![Diagram](./assets/Real_Estate_db.png)
+  
 ## Site Images
   ![Homepage1](./assets/HomePage_1.png)
   ![Homepage2](./assets/HomePage_2.png)
   ![Homepage3](./assets/HomePage_3.png)
   ![Homepage4](./assets/HomePage_4.png)
-  ![Homepage5](./assets/HomePage_5.png)
-## Detail Page Images  
+  ### Home Search
+  ![HomepageSearch1](./assets/HomePage_Search_1.png)
+  ![HomepageSearch2](./assets/HomePage_Search_2.png)
+  <hr>
+  
+## Detail Page   
   ![HomeDetail1](./assets/Home_Detail_1.png)
   ![HomeDetail2](./assets/Home_Detail_2.png)
-## Admin Panel Images
-  ![Login](./assets/Login.png)
+<hr>
+
+## User Panel 
+ ![Login](./assets/Login.png)
+ ![User1](./assets/User_1.png)
+ ![User2](./assets/User_2.png)
+ ![User3](./assets/User_3.png)
+ ![User4](./assets/User_4.png)
+ ![User5](./assets/User_5.png)
+<hr>
+
+## Admin Panel 
   ![AdminPanel1](./assets/Admin_1.png)
   ![AdminPanel2](./assets/Admin_3.png)
   ![AdminPanel3](./assets/Admin_2.png)
