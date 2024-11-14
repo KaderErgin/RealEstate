@@ -40,6 +40,7 @@ This project is an ASP.NET Core-based real estate management application develop
   ![Homepage3](./assets/HomePage_3.png)
   ![Homepage4](./assets/HomePage_4.png)
   <hr>
+  
 ## Home Search
   ![HomepageSearch1](./assets/HomePage_Search_1.png)
   ![HomepageSearch2](./assets/HomePage_Search_2.png)
