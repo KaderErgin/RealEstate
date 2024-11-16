@@ -53,8 +53,9 @@ This project is an ASP.NET Core-based real estate management application develop
 
 ## User Panel 
  ![Login](./assets/Login.png)
- ### Incoming Messages & Advertisement List
+ ### Incoming Messages & Active Advertisement List
  ![User1](./assets/User_1.png)
+ ### Passive Advertisement List
  ![User2](./assets/User_2.png)
  ![User3](./assets/User_3..png)
  ![User4](./assets/User_4.png)
@@ -64,5 +65,6 @@ This project is an ASP.NET Core-based real estate management application develop
 ## Admin Panel 
   ![AdminPanel1](./assets/Admin_1.png)
   ![AdminPanel2](./assets/Admin_3.png)
+  ### Advertisement Edit Page
   ![AdminPanel3](./assets/Admin_2.png)
   ![AdminPanel4](./assets/Admin_4.png)
